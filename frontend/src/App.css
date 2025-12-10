@@ -1,0 +1,164 @@
+/* ===== Global Styling ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f9ff;
+  /* soft blue-tinted background */
+  color: #1d3557;
+}
+
+.App {
+  max-width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ===== Header ===== */
+header {
+  background: #ffffff;
+  padding: 8px 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+
+  display: flex;
+  /* flex container */
+  justify-content: space-between;
+  /* left: logo/title, right: nav */
+  align-items: center;
+  /* vertical center */
+}
+
+/* Title */
+header h2 {
+  margin: 0;
+  color: #1d3557;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  /* horizontal alignment */
+  align-items: center;
+  /* vertical center */
+  gap: 10px;
+  /* space between span and buttons */
+  flex-wrap: wrap;
+  /* wrap on small screens */
+  margin: 0;
+  /* remove old margin */
+}
+
+/* User Info */
+nav span {
+  font-weight: 600;
+  color: #1d3557;
+}
+
+/* Buttons */
+nav button {
+  background: #457b9d;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background: #1d3557;
+}
+
+
+/* User span */
+nav span {
+  font-weight: 600;
+  margin-right: 10px;
+  color: #1d3557;
+}
+
+/* ===== Main Content ===== */
+main {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  min-height: 300px;
+}
+
+/* ===== Forms (Register / Login) ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+form input,
+form select {
+  padding: 10px;
+  border: 1px solid #cfd9e7;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+form button {
+  background: #1d3557;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background: #0e2a47;
+}
+
+/* ===== List Cards (Users, Appointments, etc.) ===== */
+.list-card {
+  background: #f0f7ff;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 0;
+  border-left: 5px solid #457b9d;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-card h3 {
+  margin: 5px 0;
+  color: #1d3557;
+}
+
+.list-card button {
+  background: #457b9d;
+  border: none;
+  padding: 8px 12px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.list-card button:hover {
+  background: #1d3557;
+}
+
+/* ===== Footer Message ===== */
+p {
+  font-size: 16px;
+  text-align: center;
+  color: #1d3557;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
