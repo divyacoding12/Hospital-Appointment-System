@@ -27,7 +27,7 @@ function App() {
       <header>
 
         <div className="flex  gap-2">
-          <h1> 🏥  Hospital Management System</h1>
+          <h1> 🏥  Hospital Appointment System</h1>
         </div>
 
 
