@@ -1,17 +1,25 @@
+
 require('dotenv').config();
 const express = require('express');
-const connectDB = require('./dbconfig/db');
 const cors = require('cors');
-
-const app = express();
+const connectDB = require('./dbconfig/db');
 connectDB();
 
-app.use(cors());
-app.use(express.json({ extended: false }));
+const app = express();
 
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/users', require('./routes/users'));
-app.use('/api/appointments', require('./routes/appointments'));
+app.use(cors());                              // Enable cross-origin requests
+app.use(express.json());                      // Parse JSON request body
+
+const authRoutes = require('./routes/auth');
+const userRoutes = require('./routes/users');
+const appointmentRoutes = require('./routes/appointments');
+
+app.use('/api/auth', authRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/appointments', appointmentRoutes);
+
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+app.listen(PORT, () => {
+    console.log(`Server started on port ${PORT}`);
+});

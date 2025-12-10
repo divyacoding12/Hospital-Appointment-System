@@ -26,10 +26,14 @@ function App() {
     <div className="App">
       <header>
 
-        <div className="flex  gap-2">
-          <h1> 🏥  Hospital Appointment System</h1>
+        <div className="flex items-center">
+          <h1 className="text-xl font-bold">🏥 Hospital Appointment System</h1>
+          {user && (
+            <span className="ml-4 text-gray-700 italic">
+              User: <strong>{user.username}</strong>
+            </span>
+          )}
         </div>
-
 
         <nav>
 
